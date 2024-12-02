@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     const { firstName, lastName, model, mileage, vin } = req.body;
 
     try {
-      const car = await prisma.car.create({
+      const clients = await prisma.clients.create({
         data: {
           firstName,
           lastName,

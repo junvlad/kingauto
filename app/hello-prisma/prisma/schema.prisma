@@ -7,7 +7,7 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-model Car {
+model Clients {
   id          Int      @id @default(autoincrement())
   firstName   String
   lastName    String
