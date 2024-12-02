@@ -1,0 +1,193 @@
+
+#mainBody {
+  display: flex;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:white;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;  
+  background-color: hwb(264 12% 84%);
+    
+}
+#navBar {
+  display: flex;
+  flex-direction: column;
+    background-color: #e0e0e0; /* Цвет фона */
+    padding: 20px; /* Отступы */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Тень на сайте */
+    height: 100vh; /* Высота сайдбара на всю высоту экрана */
+    width:150px;
+    
+      }
+  #create-client-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  height: 98%;
+  width:98%;
+  background-color: rgb(23, 19, 37);
+  border: 1px rgb(140, 140, 140) solid;
+  border-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+        }
+#new-client-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 5px;
+  background-color: #352f3b;
+  border-radius: 10px;
+  
+        }
+#new-order-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px;
+  height: 98%;
+  width:98%;
+  background-color: rgb(23, 19, 37);
+  border: 1px rgb(140, 140, 140) solid;
+  border-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+  #new-order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 5px;
+  background-color: #352f3b;
+  border-radius: 10px;
+}
+#main-new-order-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 5px;
+  background-color: #352f3b;
+  border-radius: 10px;
+}
+
+#jobs-new-order-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 5px;
+  background-color: #352f3b;
+  border-radius: 10px;
+
+
+}
+input[type='checkbox'] {
+
+width:10%;
+
+
+}
+
+#createOrderDate {
+align-items: right;
+margin-bottom: 10px;
+width: 60%;
+
+}
+
+#createOrderDate input{
+    width: 20%;
+  }
+
+#mainStatisticPage {
+  background-color: rgb(220, 220, 220);
+  padding-left: 40%;
+  height:100%;
+}
+  
+  #nvb-search-bar {
+    width: inherit;
+    margin-bottom: 10px; /* Отступ снизу для формы поиска */
+    border-radius: 5px;
+  }
+  
+  #inputSearch {
+    width: 100%; /* Ширина поля ввода поиска */
+    padding: 2px; /* Отступы внутри поля */
+    border-radius: 5px; /* Скругление углов */
+  }
+  
+  ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+  }
+  
+  li {
+    margin: 15px 0; /* Отступы между элементами списка */
+  }
+  
+  li a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #666666; /* Цвет текста ссылок */
+    font-weight: bold; /* Жирный шрифт */
+  }
+  
+  li a:hover {
+    color: #adadad; /* Цвет текста при наведении */
+  }
+
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+
+input {
+  width: 80%; /* Растягиваем входные поля на всю ширину */
+  padding: 8px;
+  border: 1px solid #adadad;
+  border-radius:6px;
+}
+input:hover {
+  border: 1px solid #ebeaea;
+  
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #bbbbbb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #404049;
+}
+#dateWrapper {
+  width:40%;
+}
+.dataFromPlaceholder {
+
+background-color: #f8f9fa;
+
+
+}
+td {
+
+  padding: 20px;
+}
+tr:hover {
+
+  background-color: #352f3b;
+  cursor: pointer;
+}
