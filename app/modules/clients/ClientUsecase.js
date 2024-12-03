@@ -11,7 +11,7 @@ export default class ClientUsecase {
   // обработчик для страницы списка клиентов
   async search(data) {
     const clients = await this.repository.getAll();
-    return {};
+    return { clients };
   }
 
   // Обработчик для страницф клиента

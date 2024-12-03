@@ -1,8 +1,8 @@
 
-"use client"
+"use client";
 import { useState } from "react";
 
-export async function CarForm({ data }) {
+export const CarForm = ({ data }) => {
 
   const [formData, setFormData] = useState({
     firstName: "",
