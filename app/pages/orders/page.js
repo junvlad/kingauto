@@ -1,55 +1,55 @@
 'use client'
 import { useState } from "react"
 
-import Jobs from "@/app/ui/newOrdersComponents/jobs"
-import Main from "@/app/ui/newOrdersComponents/main"
+import Jobs from "@/app/components/new-order/Jobs"
+import Main from "@/app/components/new-order/Main.js"
 
-export default function Neworder () {
+export default function Neworder() {
 
-const [isActive, setisActive] = useState (<Main />)
+    const [isActive, setisActive] = useState(<Main />)
 
-function handleSelectWindow (event)  {
+    function handleSelectWindow(event) {
 
-let selectedMenuItem = event.target.textContent
+        let selectedMenuItem = event.target.textContent
 
-switch (selectedMenuItem) {
-case "Основная": 
-return setisActive(<Main />)
+        switch (selectedMenuItem) {
+            case "Основная":
+                return setisActive(<Main />)
 
-case "Работы": 
-return setisActive(<Jobs />)
-}
-}
+            case "Работы":
+                return setisActive(<Jobs />)
+        }
+    }
 
 
-  return (
-    <div id='navBarNewOrderNavigation'>
-        <div id='navBarMenuList'>
-            <ul style={{ display: "flex", listStyleType: "none", padding: 0 }}>
-                <li style={{ marginRight: "10px", padding: "3px", cursor:'pointer' }}
-                onClick={handleSelectWindow}
-                >
-                Основная
-                </li>
-                <li style={{ marginRight: "10px", padding: "3px",cursor:'pointer' }}
-                onClick={handleSelectWindow}>
-                    Работы
-                </li>
-                <li style={{ marginRight: "10px", padding: "3px",cursor:'pointer' }}>
-                    Цена
-                </li>
-                <li style={{ marginRight: "10px", padding: "3px" }}>
-                    Итог
-                </li>
-                               
-                
-            </ul>
+    return (
+        <div id='navBarNewOrderNavigation'>
+            <div id='navBarMenuList'>
+                <ul style={{ display: "flex", listStyleType: "none", padding: 0 }}>
+                    <li style={{ marginRight: "10px", padding: "3px", cursor: 'pointer' }}
+                        onClick={handleSelectWindow}
+                    >
+                        Основная
+                    </li>
+                    <li style={{ marginRight: "10px", padding: "3px", cursor: 'pointer' }}
+                        onClick={handleSelectWindow}>
+                        Работы
+                    </li>
+                    <li style={{ marginRight: "10px", padding: "3px", cursor: 'pointer' }}>
+                        Цена
+                    </li>
+                    <li style={{ marginRight: "10px", padding: "3px" }}>
+                        Итог
+                    </li>
+
+
+                </ul>
+            </div>
+            <div>
+                {isActive}
+            </div>
         </div>
-        <div>
-      {isActive}
-        </div>
-    </div>
-)
+    )
 }
 
 
