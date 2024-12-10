@@ -22,7 +22,7 @@ const CarForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/cars", {
+    const response = await fetch("/api/clients", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
