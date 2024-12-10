@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function Workitems() {
   const [work, setWork] = useState([]);
-  const [searchWork, setSearchWork] = useState("");
+  const [searchWork, setSearchWork] = useState('');
 
   function handleSearchWork(e) {
     setSearchWork(event.target.value);
@@ -25,19 +25,19 @@ export default function Workitems() {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
       }}
     >
-      <div style={{ marginLeft: "10%" }}>
+      <div style={{ marginLeft: '10%' }}>
         <label for="work">Вид работ</label>
         <input name="work" value={searchWork} onChange={handleSearchWork} />
         <button onClick={handleWork}>add</button>
       </div>
 
       <div>
-        <table style={{ backgroundColor: "grey", width: "90%" }}>
+        <table style={{ backgroundColor: 'grey', width: '90%' }}>
           <thead>
             <td>№ работы</td>
             <td>Выбрать</td>

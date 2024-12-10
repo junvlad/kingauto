@@ -1,15 +1,13 @@
-
-"use client";
-import { useState } from "react";
+'use client';
+import { useState } from 'react';
 
 export const CarForm = ({ data }) => {
-
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    model: "",
-    mileage: "",
-    vin: "",
+    firstName: '',
+    lastName: '',
+    model: '',
+    mileage: '',
+    vin: '',
   });
   console.log({ data });
 
@@ -24,26 +22,26 @@ export const CarForm = ({ data }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/cars", {
-      method: "POST",
+    const response = await fetch('/api/cars', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
     });
 
     if (response.ok) {
       const result = await response.json();
-      console.log("Car saved:", result);
+      console.log('Car saved:', result);
       setFormData({
-        firstName: "",
-        lastName: "",
-        model: "",
-        mileage: "",
-        vin: "",
+        firstName: '',
+        lastName: '',
+        model: '',
+        mileage: '',
+        vin: '',
       });
     } else {
-      console.error("Failed to save car data.");
+      console.error('Failed to save car data.');
     }
   };
 

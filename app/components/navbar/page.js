@@ -1,6 +1,6 @@
-"use client";
-import Link from "next/link";
-import { useState } from "react";
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Navigation() {
   const [isSubMenuServiceOpen, setIsSubMenuServiceOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Navigation() {
       <div>
         <form id="nvb-search-bar" type="search" name="client">
           <input
-            style={{ width: "80%" }}
+            style={{ width: '80%' }}
             id="inputSearch"
             placeholder="поиск"
             type="search"
@@ -30,10 +30,10 @@ export default function Navigation() {
             <div onClick={toggleSubServiseMenu}>Сервис</div>
             {isSubMenuServiceOpen && (
               <ul>
-                <li style={{ marginLeft: "15px" }}>
+                <li style={{ marginLeft: '15px' }}>
                   <Link href="/pages/clients">Make new client</Link>
                 </li>
-                <li style={{ marginLeft: "15px" }}>
+                <li style={{ marginLeft: '15px' }}>
                   <Link href="/pages/orders">Make a new order</Link>
                 </li>
               </ul>
@@ -44,10 +44,10 @@ export default function Navigation() {
             <div onClick={toggleSubModuleMenu}>Модули</div>
             {isSubMenuModulesOpen && (
               <ul>
-                <li style={{ marginLeft: "15px" }}>
+                <li style={{ marginLeft: '15px' }}>
                   <Link href="/pages/jobs">Работы</Link>
                 </li>
-                <li style={{ marginLeft: "15px" }}>
+                <li style={{ marginLeft: '15px' }}>
                   <Link href="/pages/orders">Make a new order</Link>
                 </li>
               </ul>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 useState;
 
@@ -40,7 +40,7 @@ export default function Main() {
           <div>
             <label>Причина обращения</label>
             <br />
-            <textarea value={note} style={{ resize: "none" }}></textarea>
+            <textarea value={note} style={{ resize: 'none' }}></textarea>
           </div>
           <div>
             <button>Сохранить</button>
