@@ -1,17 +1,30 @@
 
-import { handlePage } from "@/app/utils/handlers";
-import ClientUsecase from "@/app/modules/clients/ClientUsecase";
-import CarForm from "@/app/components/CarForm";
+"use client";
+import { useState } from "react";
 
+export const CarForm = ({ data }) => {
 
-export const Clients = async () => {
-  const clients = await handlePage(ClientUsecase, 'search');
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    model: "",
+    mileage: "",
+    vin: "",
+  });
+  console.log({ data });
 
-<<<<<<< HEAD
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/clients", {
+    const response = await fetch("/api/cars", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -79,9 +92,6 @@ export const Clients = async () => {
       <button type="submit">Отправить</button>
     </form>
   );
-=======
-  return <CarForm data={clients} />;
->>>>>>> d6b86aebf2afa5324b3dd885387b9a271b0d43b6
 };
 
-export default Clients;
+export default CarForm;
