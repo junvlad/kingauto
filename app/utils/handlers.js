@@ -1,4 +1,4 @@
-import prisma from "../lib/prisma";
+import prisma from '../lib/prisma';
 
 /**
  * Функция обработчик для страницы
@@ -7,7 +7,6 @@ import prisma from "../lib/prisma";
  * @returns {Object} данные для страницы полученные с бэка
  */
 export const handlePage = (Usecase, method) => {
-  const handler = new Usecase({ prisma })
+  const handler = new Usecase({ prisma });
   return handler[method]();
-
-}
+};

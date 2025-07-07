@@ -1,6 +1,7 @@
 'use client';
-import Link from 'next/link';
 import { useState } from 'react';
+import NavLink from './NavLink.js';
+import Button from '../buttons/Button.js';
 
 export default function Navigation() {
   const [isSubMenuServiceOpen, setIsSubMenuServiceOpen] = useState(false);
@@ -27,34 +28,34 @@ export default function Navigation() {
       <div>
         <ul>
           <li>
-            <div onClick={toggleSubServiseMenu}>Сервис</div>
+            <Button text="Сервис" onClick={toggleSubServiseMenu} />
             {isSubMenuServiceOpen && (
               <ul>
                 <li style={{ marginLeft: '15px' }}>
-                  <Link href="/pages/clients">Make new client</Link>
+                  <NavLink href="/pages/clients" title="Новый клиент" />
                 </li>
                 <li style={{ marginLeft: '15px' }}>
-                  <Link href="/pages/orders">Make a new order</Link>
+                  <NavLink href="/pages/orders" title="Новый заказ" />
                 </li>
               </ul>
             )}
           </li>
 
           <li>
-            <div onClick={toggleSubModuleMenu}>Модули</div>
+            <Button text="Модули" onClick={toggleSubModuleMenu} />
             {isSubMenuModulesOpen && (
               <ul>
                 <li style={{ marginLeft: '15px' }}>
-                  <Link href="/pages/jobs">Работы</Link>
+                  <NavLink href="/pages/jobs" title="Работы" />
                 </li>
                 <li style={{ marginLeft: '15px' }}>
-                  <Link href="/pages/orders">Make a new order</Link>
+                  <NavLink href="/pages/orders" title="Новый заказ" />
                 </li>
               </ul>
             )}
           </li>
           <li>
-            <Link href="/pages/statistics">Статистика</Link>
+            <NavLink href="/pages/statistics" title="Статистика" />
           </li>
         </ul>
       </div>

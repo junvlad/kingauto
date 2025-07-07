@@ -11,14 +11,24 @@ export default class ClientRepository {
     return this.prisma.clients.findMany();
   }
 
-  async create(client) {
-    await this.prisma.clients.create(client)
+  async create(uid, clientData) {
+    await this.prisma.clients.upsert({
+      where: {
+        uid,
+      },
+      update: {
+        ...clientData,
+      },
+      create: {
+        ...clientData,
+      },
+    });
   }
 
   async update(uid, clientData) {
     await this.prisma.upsert({
       where: uid,
-      data: clientData
-    })
+      data: clientData,
+    });
   }
 }

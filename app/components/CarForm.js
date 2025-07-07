@@ -1,5 +1,7 @@
 'use client';
 import { useState } from 'react';
+import Api from '../lib/Api';
+const api = new Api();
 
 export const CarForm = ({ data }) => {
   const [formData, setFormData] = useState({
@@ -9,7 +11,6 @@ export const CarForm = ({ data }) => {
     mileage: '',
     vin: '',
   });
-  console.log({ data });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,28 +22,15 @@ export const CarForm = ({ data }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const response = await fetch('/api/cars', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
-      const result = await response.json();
-      console.log('Car saved:', result);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        model: '',
-        mileage: '',
-        vin: '',
+    api
+      .post('/api/clients', formData)
+      .then((res) => {
+        console.log('norm', { res });
+      })
+      .catch((err) => {
+        // добавить обработчик ошибок на клиент
+        console.log('err', { err });
       });
-    } else {
-      console.error('Failed to save car data.');
-    }
   };
 
   return (

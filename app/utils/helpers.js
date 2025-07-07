@@ -1,1 +1,1 @@
-export const isLocal = process.env.SYSID === "LOCAL";
+export const isLocal = process.env.SYSID === 'LOCAL';

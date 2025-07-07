@@ -1,31 +1,31 @@
-"use client";
+'use client';
 
 const clientData = [
   {
     id: 1,
-    name: "Bill",
-    carModel: "Audi",
-    vinNumber: "123",
-    mileage: "70000km",
+    name: 'Bill',
+    carModel: 'Audi',
+    vinNumber: '123',
+    mileage: '70000km',
   },
   {
     id: 2,
-    name: "John",
-    carModel: "BMW",
-    vinNumber: "33i4u34",
-    mileage: "78000km",
+    name: 'John',
+    carModel: 'BMW',
+    vinNumber: '33i4u34',
+    mileage: '78000km',
   },
   {
     id: 3,
-    name: "Bill",
-    carModel: "Skoda",
-    vinNumber: "98394834hejh9823",
-    mileage: "30000km",
+    name: 'Bill',
+    carModel: 'Skoda',
+    vinNumber: '98394834hejh9823',
+    mileage: '30000km',
   },
 ];
 
 const MyComponent = () => {
-  let store = JSON.parse(localStorage.getItem("clientsData"));
+  let store = JSON.parse(localStorage.getItem('clientsData'));
   console.log(store[0]);
 
   return (
@@ -34,7 +34,7 @@ const MyComponent = () => {
         <input type="search"></input>
       </div>
       <div>
-        <table style={{ color: "white" }}>
+        <table style={{ color: 'white' }}>
           <thead>
             <td>Id</td>
             <td>Name</td>
